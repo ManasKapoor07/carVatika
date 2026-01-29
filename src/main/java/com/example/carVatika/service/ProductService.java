@@ -10,8 +10,6 @@ import com.example.carVatika.model.Product;
 
 @Service
 public class ProductService  {
-
-
    private  ProducRepositories productRepository;
 
    //Contructor injection
