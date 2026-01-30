@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.example.carVatika.model.Product;
 
-public interface ProducRepositories  extends JpaRepository<Product, Integer >{
+public interface ProducRepositories  extends JpaRepository<Product, Long >{
     
 }

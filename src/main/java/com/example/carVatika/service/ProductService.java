@@ -22,7 +22,7 @@ public class ProductService  {
         return productRepository.findAll();
     }
 
-    public Product getProductsById(@PathVariable int id) {
+    public Product getProductsById(@PathVariable Long id) {
         return  productRepository.findById(id).orElse(null);
     }
 }

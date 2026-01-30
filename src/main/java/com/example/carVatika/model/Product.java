@@ -18,7 +18,7 @@ public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     @Column(nullable = false)
     private String name;
@@ -32,24 +32,20 @@ public class Product {
 
     private double price;
 
-    @OneToMany(
-        mappedBy = "product",
-        cascade = CascadeType.ALL,
-        orphanRemoval = true
-    )
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<ProductImage> images = new ArrayList<>();
 
-    public Product() {}
+    public Product() {
+    }
 
     public Product(String name, String description, String category,
-                   int quantity, double price) {
+            int quantity, double price) {
         this.name = name;
         this.description = description;
         this.category = category;
         this.quantity = quantity;
         this.price = price;
     }
-
 
     public void addImage(ProductImage image) {
         images.add(image);
@@ -63,7 +59,7 @@ public class Product {
 
     /* ---------- Getters & Setters ---------- */
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
